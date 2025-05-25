@@ -94,10 +94,6 @@ button {
   background-color: rgb(52, 15, 86);
 }
 
-.questionList:hover .card{
-  height:50px;
-}
-
 @media (max-width: 600px) {
   html {
     font-size: 55%; /* Slightly reduce base font size */
