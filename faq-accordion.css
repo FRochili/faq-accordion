@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+
+.background {
+  height:40vh;  
+  position: fixed;
+  top: 0;
+  z-index: -999;
+}
+
+.card {
+  width: 50rem;
+  background-color: white;
+  padding: 3rem;
+  border-radius: 2rem;
+  margin: 10rem 0;
+  transition: height 0.4s ease;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 2rem;
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+
+.questionList {
+  margin-top:2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question {
+  font-family: 'Ubuntu';
+  font-size: 1.6rem;  
+}
+
+button {
+  background-color: blueviolet;
+  color: white;
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  padding:0;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 2rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.answer.active {
+  max-height: 200px; /* Large enough to show full content */
+}
+
+.questionList:hover {
+  cursor: pointer;
+}
+
+.questionList:hover button{
+  background-color: rgb(52, 15, 86);
+}
+
+.questionList:hover .card{
+  height:50px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 55%; /* Slightly reduce base font size */
+  }
+
+  .card {
+    width: 70%;         /* Full width with padding */
+    padding: 2rem;      /* Less padding */
+    border-radius: 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    gap: 1rem;
+  }
+
+  .question {
+    font-size: 1.4rem;
+  }
+
+  .answer {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+
+  button {
+    width: 28px;
+    height: 28px;
+    font-size: 1.8rem;
+  }
+
+  .background {
+    height: 30vh; /* Reduce height for smaller screen */
+  }
+}
